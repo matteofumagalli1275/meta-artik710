@@ -15,7 +15,7 @@ SRCREV = "013f0a592a45647932eccb96d4fdfece0da23712"
 inherit kernel
 require recipes-kernel/linux/linux-yocto.inc
 
-do_compile_kitra710C_append() {
+do_compile_append_kitra710C() {
 	#Uboot laways loads rev03
 	cp ${B}/arch/${ARCH}/boot/dts/nexell/s5p6818-kitra710C.dtb ${B}/arch/${ARCH}/boot/dts/nexell/s5p6818-artik710-raptor-rev03.dtb
 
